@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574180668597.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "16|46|34|0|\n",
+    "hash" : "3876270630",
+    "id" : "55329E03",
+    "lastKnownWriteTime" : 1574183540,
+    "last_content_update" : 1574183540312,
+    "path" : "~/Dropbox/research/Project_SpatialSocialNet/DATA_SpatialNet/genSpatialDistribution_function.R",
+    "project_path" : "genSpatialDistribution_function.R",
+    "properties" : {
+        "cursorPosition" : "16,0",
+        "scrollLine" : "6",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

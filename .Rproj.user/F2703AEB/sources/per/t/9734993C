@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574182537436.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4158908597",
+    "id" : "9734993C",
+    "lastKnownWriteTime" : 1574183639,
+    "last_content_update" : 1574183639702,
+    "path" : "~/Dropbox/research/Project_SpatialSocialNet/DATA_SpatialNet/simulation_V1.R",
+    "project_path" : "simulation_V1.R",
+    "properties" : {
+        "cursorPosition" : "33,62",
+        "scrollLine" : "14",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
