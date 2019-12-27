@@ -1,7 +1,7 @@
 # Script to create the lattice of m X m
 
 # Following paper:
-# generating and analysingspatial social networks de Alizadeh
+# generating and analysing spatial social networks de Alizadeh
 
 
 # creation: nov 18, 2019
@@ -44,7 +44,7 @@ lattice_creation <- function(m, number_of_humans) {
 }
 # example
 # df <- lattice_creation(m = 100, number_of_humans = 100)
-# # Plot teh positions
+# # Plot the positions
 # br <- seq(from= 0, to=m, by=1)
 # ggplot(df, aes(x,y)) + geom_point(col = "red", fill="black", size = 5, shape = 19) +
 #   scale_x_continuous(name="X", breaks=br) +

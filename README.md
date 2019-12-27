@@ -10,6 +10,8 @@ Script for playing with humanoids in a spatial net.
 
 **simulation_v2.R**: simulation Barabasi-Albert  spatial net.
 
+**simulation_v3.R**: simulation with small world spatial nets.
+
 
 
 ####Functions:
@@ -25,6 +27,8 @@ Script for playing with humanoids in a spatial net.
 **genSpatialDistribution_function.R**: 
 
 **genBA_SpatialNet_function.R**: Develop a BA spatial network simulation.
+
+**small_world_spatial_reconnect_function.R**: develop a reconnection of a lattice to create a small world spatial network based on a probability distribution of vertex connections of distance.
 
 
 
