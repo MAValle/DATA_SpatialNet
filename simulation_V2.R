@@ -2,7 +2,7 @@
 # Simulation with BA spatial networks
 
 
-# creation: 04-cic-19
+# creation: 04-dic-19
 # name: simulation_V2.R
 
 rm(list = ls())

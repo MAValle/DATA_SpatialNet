@@ -15,8 +15,9 @@ source("genSpatialDistribution_function.R")
 source("genSpatialNet_function.R")
 
 N = 100
-a = 2.0
+a = 2.0 # clustering exponent. the Higher the exponent, more difficult the conection at higher distances
 
+# m es el lado del cuadrado.
 # obs: cuando N/m^2 es aprox igual al 10%, la red comienza a conectarse mas.
 # n/m^2 es la probabilidad que un hueco del lattice sea ocupado por un humanoide.
 

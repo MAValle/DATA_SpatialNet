@@ -2,6 +2,10 @@
     "path" : "~/Dropbox/research/Project_SpatialSocialNet/DATA_SpatialNet",
     "sortOrder" : [
         {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
+        {
             "ascending" : true,
             "columnIndex" : 2
         }

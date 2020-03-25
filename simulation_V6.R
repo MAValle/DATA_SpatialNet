@@ -1,28 +1,10 @@
 
-# Simulation with small world networks spatial networks
+# Simulation with small world networks using spatial coordinates provided in 
+# TIEDENSITY.RData.
 
 
-# creation: 26-dic-19
-# name: simulation_V3.R
-
-
-# Procedure (generate a small world net) in a grid:
-# 1. set a grid of NXN. Here, in every node there is a humanoid.
-# 2. select node i (could be in order starting from node 1)
-# 3. select each neighbour of node i, and with probability p
-#   we reconnect this edge to another vertex k at random not in {i,j}.
-# 4. back to 2 until all nodes have been reconnected.
-# 5. repeat 2-6 with second neares neighborhood.
-
-# necessary functions:
-# to determine the neigboors grade 1 for node i.
-# to determine the neigboors grade 1 for node i.
-# to do steps 3,4, and 5.
-
-# For spatial net:
-# in step 3, p=C x d_ij ^-alpha
-# in step 4, if u < 1-p, select k \ {i,j} and do 5.
-
+# creation: 14-ene-20
+# name: simulation_V6.R
 
 rm(list = ls())
 library(ggplot2)
@@ -34,8 +16,18 @@ source("genBA_SpatialNet_function.R")
 source("get_powerLaw_prob_function.R")
 source("genSpatialDistribution_function.R")
 source("small_world_spatial_reconnect_function.R")
+source("put_humanoids_function.R")
+
+load("TIEDENSITY.RData")
 
 # # # # # Create the grille
+# https://stackoverflow.com/questions/26086955/set-up-a-igraph-graph-using-the-xy-co-ordinates-for-nodes
+# necesito partir con esta custom surface con todos lso nodos conectados a 
+# sus vecinos mas cercanos.
+
+
+
+
 N = 50 #total number of nodes (humanoids) of the grid-net
 
 grilla <- make_lattice(length = N, dim = 2)

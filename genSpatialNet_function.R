@@ -9,23 +9,38 @@
 
 # Notes:
 # 18-nov-19: creation
+# 13-mar-20: cuando el numero de nodos es mayor a 200, la funcion demora demasiado en ejecutarse
+# debido al comando dist. Agregamos la opcion method = "fast" para calcular las distancias
+# un poco mas rapido con https://rdrr.io/cran/Rfast/man/Dist.html.
+# Haciendo pruebas, no se bien que hace Dist, porque las distancias no coinciden con las de dist.
 
 # inputs:
 #   * df: dataframe coming from lattice_creTION FUNCTION 
 #   * numberof_humans
 #   * alpha constant for power law pdf
 #   * C constante for power law distributiomn
-genSpatialNet <- function(df, number_of_humans, C, alpha) {
+genSpatialNet <- function(df, number_of_humans, C, alpha, method="normal") {
   library(igraph)
+  library(Rfast)
+  message("Now computing distance matrix.....")
+  if (method == "fast") {
+    #distances <- dist(df[, c(2,3)] )
+    distances1 <- Dist(df[, c(2,3)] , method = "euclidean", square = TRUE, vector = FALSE)
+    distances1 <- as.matrix( dist(distances) )
+  } else {
+    distances2 <- dist(df[, c(2,3)] )
+    distances2 <- as.matrix(distances)
+  }
   
-  distances <- dist(df[, c(2,3)] )
-  distances <- as.matrix(distances)
+
+  
   nodes <- colnames(distances)
   A <- matrix(NA, ncol = number_of_humans, nrow = number_of_humans) # adjacency matrix
   colnames(A) <- rownames(A) <- nodes
   
   # # Generating the spatial net according to the spatial ER
   for ( i in 1:number_of_humans) {
+    print(paste("Iteration ", i, " of ", number_of_humans))
     nodo = nodes[i]
     otherones <- setdiff(nodes, nodo)
     cols_id <- which(colnames(distances) %in% otherones)
